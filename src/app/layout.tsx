@@ -4,6 +4,7 @@ import SiteFooter from "@/components/layout/SiteFooter";
 import SiteHeader from "@/components/layout/SiteHeader";
 import "./globals.css";
 
+{/* <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
 
 
 const lexend = Lexend({
@@ -36,7 +37,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
+  return (  
     <html lang="en">
       <body
         className={`${space_grotesk.variable} ${dm_snans.variable} ${lexend.variable} antialiased`}

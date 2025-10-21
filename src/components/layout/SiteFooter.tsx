@@ -10,23 +10,25 @@ export default function SiteFooter(){
         {src:"Youtube.png",width:37,alt:"youtube",height:37},
     
     ]
+    const headers_class="font-bold leading-7 text-lg font-lexend text-white";
+    const items_class="";
     return(
      
         <footer className="bg-primary4 rounded-t-4xl">
             <Container> 
-                <div className="flex">  
+                <div className="flex mx-auto">  
                     <div>
-                            <h2>Freelancers</h2>
+                            <h2 className={headers_class}>Freelancers</h2>
                             {/* divider */}
-                            <div></div>
+                            <div className="h-1 w-16 bg-white"></div>
                             <ul>
-                                <li><Link href={""}>How to start</Link></li>
+                                <li className="leading-9 text-white"><Link href={""}>How to start</Link></li>
                                 <li><Link href={""}>YohoWork Academy</Link></li>
                                 <li><Link href={""}>Find freelance jobs worldwide</Link></li>
                             </ul>
                     </div>
                         <div>
-                            <h2>Companies</h2>
+                            <h2 className={headers_class}>Companies</h2>
                             {/* divider */}
                             <div></div>
                             <ul>
@@ -38,7 +40,7 @@ export default function SiteFooter(){
 
                         </div>
                         <div>
-                            <h2>Sponsors</h2>
+                            <h2 className={headers_class}>Sponsors</h2>
                             {/* divider */}
                             <div></div>
                             <ul>
@@ -50,7 +52,7 @@ export default function SiteFooter(){
                             </ul>
                         </div>
                         <div>
-                        <h2>Resources</h2>
+                        <h2 className={headers_class}>Resources</h2>
                             {/* divider */}
                             <div></div>
                             <ul>
@@ -63,7 +65,7 @@ export default function SiteFooter(){
                         </div>
                 </div>
                 <div className="flex">
-                    <h2>Follow Us</h2>
+                    <h2 className={headers_class}>Follow Us</h2>
                     {/*followus */}
                     {/* mobile apps */}
                     <h2>Mobile Apps</h2>

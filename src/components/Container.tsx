@@ -1,7 +1,8 @@
 
-export default function Container({children}: Readonly<{children:React.ReactNode}>,className?:string){ 
+export default function Container({children,className}:Readonly<{children:React.ReactNode;className?:string;}>)
+{ 
     return(
-        <div className={`container max-w-[1580px] ${className}`}>
+        <div className={`container.responsive px-20 ${className || ""}`}>
         {children}
         </div>
     )
