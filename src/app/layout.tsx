@@ -1,15 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Lexend, Space_Grotesk, DM_Sans } from 'next/font/google';
+import SiteFooter from "@/components/layout/SiteFooter";
+import SiteHeader from "@/components/layout/SiteHeader";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+
+const lexend = Lexend({
+  variable: "--font-lexend",
   subsets: ["latin"],
+  display: "swap"
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const space_grotesk = Space_Grotesk({
+  variable: "--font-space",
   subsets: ["latin"],
+  display: "swap"
+
+});
+
+const dm_snans= DM_Sans({
+  variable: "--font-dm_sans",
+  subsets: ["latin"],
+  display: "swap"
+
 });
 
 export const metadata: Metadata = {
@@ -25,9 +39,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${space_grotesk.variable} ${dm_snans.variable} ${lexend.variable} antialiased`}
       >
+        <SiteHeader/>
         {children}
+        <SiteFooter/>
+        
       </body>
     </html>
   );
