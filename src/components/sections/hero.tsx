@@ -8,7 +8,6 @@ export default function Hero(){
         <p className="text-primary1 font-light text-3xl leading-9 mb-2 z-10">YohoWork</p>
         <h1 className="font-bold text-6xl leading-tight text-primary3 mb-4.5 z-10">Skill Up, Scale Up, Rise Up</h1>
         <p className="text-center text-2xl leading-8  tracking-[0.55px] mb-6.5 z-10">Welcome to YohoWork, the global platform empowering freelancers to <br/> make a positive impact worldwide. </p>
-        {/* <Image src="blueBlur.svg" alt="blurBlur" width={550} height={550} className="z-1 absolute"></Image> */}
         <div className="flex gap-6.5 mb-12.5 z-10">
             <button className="bg-primary1 border text-white font-dm_snans leading-6.5 text-lg tracking-[0.55px] rounded-full border-black px-5.5 py-3">YOU & YOHO</button>
             <button className="border font-dm_snans text-lg leading-6.5 tracking-[0.55px]  rounded-full border-black px-5.5 py-3">Explore</button>

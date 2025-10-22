@@ -2,6 +2,7 @@ import Container from "@/components/Container";
 import Image from "next/image"
 import Link from "next/link";
 export default function SiteFooter(){
+
     const followUs=[
         {src:"Facebook.png",width:37,alt:"facebook",height:37},
         {src:"Linkedin.png",width:37,alt:"linkedin",height:37},
@@ -10,75 +11,87 @@ export default function SiteFooter(){
         {src:"Youtube.png",width:37,alt:"youtube",height:37},
     
     ]
-    const headers_class="font-bold leading-7 text-lg font-lexend text-white";
-    const items_class="";
-    return(
-     
-        <footer className="bg-primary4 rounded-t-4xl">
-            <Container> 
-                <div className="flex mx-auto">  
-                    <div>
-                            <h2 className={headers_class}>Freelancers</h2>
-                            {/* divider */}
-                            <div className="h-1 w-16 bg-white"></div>
-                            <ul>
-                                <li className="leading-9 text-white"><Link href={""}>How to start</Link></li>
-                                <li><Link href={""}>YohoWork Academy</Link></li>
-                                <li><Link href={""}>Find freelance jobs worldwide</Link></li>
-                            </ul>
-                    </div>
-                        <div>
-                            <h2 className={headers_class}>Companies</h2>
-                            {/* divider */}
-                            <div></div>
-                            <ul>
-                                <li><Link href={""}>How to hire</Link></li>
-                                <li><Link href={""}>Job posting guide</Link></li>
-                                <li><Link href={""}>Payment and security</Link></li>
-                                <li><Link href={""}>Hire in crisis countries</Link></li>
-                            </ul>
 
-                        </div>
-                        <div>
-                            <h2 className={headers_class}>Sponsors</h2>
+    const  links=[
+        {
+            title: "Freelancers",
+            listitems: [
+                { title: "How to start", url: "#" },
+                { title: "YohoWork Academy", url: "#" },
+                { title: "Find freelance jobs worldwide", url: "#" }
+            ]
+        },
+        {
+            title: "Companies",
+            listitems: [
+                { title: "How to hire", url: "#" },
+                { title: "Job posting guide", url: "#" },
+                { title: "Payment and security", url: "#" },
+                { title: "Hire in crisis countries", url: "#" }
+            ]
+        },
+        {
+            title: "Sponsors",
+            listitems: [
+                { title: "About us", url: "#" },
+                { title: "Sponsors relations", url: "#" },
+                { title: "Our impact", url: "#" },
+                { title: "Press", url: "#" },
+                { title: "Trust, safety & security", url: "#" }
+            ]
+        },
+        {
+            title: "Resources",
+            listitems: [
+                { title: "Help and support", url: "#" },
+                { title: "Success stories", url: "#" },
+                { title: "Community", url: "#" },
+                { title: "Modern slavery statement", url: "#" },
+                { title: "Bold", url: "#" }
+            ]
+        }
+    ];
+    
+    const headers_class="font-bold leading-7 text-lg font-lexend text-white";
+    const items_class="leading-9 text-white";
+    return(
+        <footer className="bg-primary4">
+            <Container> 
+                <div className="flex justify-center">
+                    {links.map((link)=>(
+                    <div key={link.title}>
+                        <h2 className={headers_class}>{link.title}</h2>
                             {/* divider */}
-                            <div></div>
-                            <ul>
-                                <li><Link href={""}>About us</Link></li>
-                                <li><Link href={""}>Sponsors relations</Link></li>
-                                <li><Link href={""}>Our impact</Link></li>
-                                <li><Link href={""}>Press</Link></li>
-                                <li><Link href={""}>Trust, safety & security</Link></li>
-                            </ul>
-                        </div>
-                        <div>
-                        <h2 className={headers_class}>Resources</h2>
-                            {/* divider */}
-                            <div></div>
-                            <ul>
-                                <li><Link href={""}>Help and support</Link></li>
-                                <li><Link href={""}>Success stories</Link></li>
-                                <li><Link href={""}>Community</Link></li>
-                                <li><Link href={""}>Modern slavery statement</Link></li>
-                                <li><Link href={""}>Bold</Link></li>
-                            </ul>
-                        </div>
+                        <div className="h-1 w-16 bg-white"></div>
+                        <ul>
+                         {link.listitems.map((listitem,id)=>
+                            <li key={id} className={items_class}><Link href={listitem.url}>{listitem.title}</Link></li>
+                         )}
+                        </ul>
+                    </div>
+                    ))} 
                 </div>
                 <div className="flex">
                     <h2 className={headers_class}>Follow Us</h2>
                     {/*followus */}
+                    <Image src="/Facebook.png" alt="FacebookLogo" width={36} height={36}/>
+                    <Image src="/Instagram.png" alt="InstagramLogo" width={36} height={36}/>
+                    <Image src="/Linkedin.png" alt="LinkedinLogo" width={36} height={36}/>
+                    <Image src="/Twitter.png" alt="TwitterLogo" width={36} height={36}/>
+                    <Image src="/Youtube.png" alt="YoutubeLogo" width={36} height={36}/>
+
                     {/* mobile apps */}
-                    <h2>Mobile Apps</h2>
-                    <Image src="" alt=""/>
-                    <Image src="" alt=""/>
+                    <h2 className="text-white">Mobile Apps</h2>
+                    <Image src="/apple.png" alt="appleLogo" width={36} height={36}/>
+                    <Image src="/android.png" alt="androidLogo" width={36} height={36}/>
                 </div>
 
                 <div>
-                <span>© 2023 - 2024 YOHOWORK.com®</span>
-                <Link href={""}>Terms of Service</Link>
-                <Link href={""}>Privacy Policy</Link>
-                <Link href={""}>Cookie Settings </Link>
-                <Link href={""}>Accessibility</Link>
+                <span className="text-white">© 2023 - 2024 YOHOWORK.com®</span>
+                <Link className="text-white" href={""}>Terms of Service</Link>
+                <Link className="text-white" href={""}>Privacy Policy</Link>
+                <Link className="text-white" href={""}>Cookie Settings </Link>
+                <Link className="text-white" href={""}>Accessibility</Link>
                 </div>
 
             </Container>
