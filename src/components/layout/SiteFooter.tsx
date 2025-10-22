@@ -1,5 +1,4 @@
 import Container from "@/components/Container";
-import { url } from "inspector";
 import Image from "next/image"
 import Link from "next/link";
 export default function SiteFooter(){
@@ -75,18 +74,24 @@ export default function SiteFooter(){
                 <div className="flex">
                     <h2 className={headers_class}>Follow Us</h2>
                     {/*followus */}
+                    <Image src="/Facebook.png" alt="FacebookLogo" width={36} height={36}/>
+                    <Image src="/Instagram.png" alt="InstagramLogo" width={36} height={36}/>
+                    <Image src="/Linkedin.png" alt="LinkedinLogo" width={36} height={36}/>
+                    <Image src="/Twitter.png" alt="TwitterLogo" width={36} height={36}/>
+                    <Image src="/Youtube.png" alt="YoutubeLogo" width={36} height={36}/>
+
                     {/* mobile apps */}
-                    <h2>Mobile Apps</h2>
-                    <Image src="" alt=""/>
-                    <Image src="" alt=""/>
+                    <h2 className="text-white">Mobile Apps</h2>
+                    <Image src="/apple.png" alt="appleLogo" width={36} height={36}/>
+                    <Image src="/android.png" alt="androidLogo" width={36} height={36}/>
                 </div>
 
                 <div>
-                <span>© 2023 - 2024 YOHOWORK.com®</span>
+                <span className="text-white">© 2023 - 2024 YOHOWORK.com®</span>
                 <Link className="text-white" href={""}>Terms of Service</Link>
-                <Link href={""}>Privacy Policy</Link>
-                <Link href={""}>Cookie Settings </Link>
-                <Link href={""}>Accessibility</Link>
+                <Link className="text-white" href={""}>Privacy Policy</Link>
+                <Link className="text-white" href={""}>Cookie Settings </Link>
+                <Link className="text-white" href={""}>Accessibility</Link>
                 </div>
 
             </Container>

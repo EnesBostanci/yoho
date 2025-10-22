@@ -1,34 +1,16 @@
-import CardSm from "@/components/CardSm";
-import { title } from "process";
-export default function Browse(){
-
-const cards=[
-    {
-        url:"",
-        title:"Multimedia",
-    },
-    {
-        url:"",
-        title:"Translation",
-    },
-    {
-        url:"",
-        title:"Photography",
-    },
-    {
-        url:"",
-        title:"Accounting",
-    },
-]
+import CardSm from "@/components/Ui/CardSm";
+import Container from "../Container";
+export default function Browse({render,header}:
+    {    render:{url:string;
+         title: string;
+        }[];
+    header:string}){
 
     return(
         <section>
-            <Container className="flex ">
-            <h2 className="font-bold leading-tight">Browse Opportunities by Fields</h2>
-            <CardSm></CardSm>
-            <CardSm></CardSm>
-            <CardSm></CardSm>
-            <CardSm></CardSm>
+            <Container className="flex">
+            <h2 className="font-bold leading-tight">{header}</h2>
+            {render.map((card)=>(<CardSm url={card.url} title={card.title} key={card.title} />))}
             </Container>
 
         </section>

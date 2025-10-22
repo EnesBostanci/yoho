@@ -1,11 +1,26 @@
+'use client'
+
 import Image from "next/image";
 import Container from "../Container";
-export default function WhyBecome(){
+import Card from "../Ui/Card";
+import { useCards } from "@/context/CardsContext";
+export default function WhyBecome({title}:{title?:string}){
+const Cards=useCards();
+
     return(
         <section>
             <Container>
-            <h2 className="z-10">Why Become a WonderMaker?</h2>
-            <Image alt={ } src={} className="z-0"/>
+            { title && 
+            <>
+            <h2 className="z-10">{title}</h2> 
+            <Image width={370} height={370} alt="GreenBlur" src="GreenBlur.svg" className="z-0"/>
+            </>
+            }
+
+            {Cards.map((card)=>(
+                <Card key={card.header} header={card.header} url={card.url} text={card.text} button={card.button}/>
+            ))}
+            
             </Container>
         </section>
     );
