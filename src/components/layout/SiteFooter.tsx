@@ -52,14 +52,14 @@ export default function SiteFooter(){
         }
     ];
     
-    const headers_class="font-bold leading-7 text-lg font-lexend text-white";
-    const items_class="leading-9 text-white";
+    const headers_class="font-bold leading-7 text-lg font-lexend text-white text-text3 ";
+    const items_class="leading-9 text-white text-text3";
     return(
-        <footer className="bg-primary4">
-            <Container> 
-                <div className="flex justify-center">
+        <footer className="bg-primary4 mt-30">
+            <Container className="flex flex-col pt-27.5 gap-10"> 
+                <div className="flex justify-center gap-15">
                     {links.map((link)=>(
-                    <div key={link.title}>
+                    <div className="flex flex-col gap-2" key={link.title}>
                         <h2 className={headers_class}>{link.title}</h2>
                             {/* divider */}
                         <div className="h-1 w-16 bg-white"></div>
@@ -71,27 +71,32 @@ export default function SiteFooter(){
                     </div>
                     ))} 
                 </div>
-                <div className="flex">
-                    <h2 className={headers_class}>Follow Us</h2>
+                <div className="flex  justify-between ">
+                    <div className="flex items-center gap-2.5">
+                    <h2 className="text-white mr-3 text-base leading-8 font-medium">Follow Us</h2>
                     {/*followus */}
                     <Image src="/Facebook.png" alt="FacebookLogo" width={36} height={36}/>
                     <Image src="/Instagram.png" alt="InstagramLogo" width={36} height={36}/>
                     <Image src="/Linkedin.png" alt="LinkedinLogo" width={36} height={36}/>
                     <Image src="/Twitter.png" alt="TwitterLogo" width={36} height={36}/>
                     <Image src="/Youtube.png" alt="YoutubeLogo" width={36} height={36}/>
-
+                    </div>
                     {/* mobile apps */}
-                    <h2 className="text-white">Mobile Apps</h2>
+                    <div className="flex items-center gap-2.5">
+                    <h2 className="text-white mr-3 text-base leading-8 font-medium">Mobile Apps</h2>
                     <Image src="/apple.png" alt="appleLogo" width={36} height={36}/>
                     <Image src="/android.png" alt="androidLogo" width={36} height={36}/>
+                    </div>
                 </div>
-
-                <div>
+                <div className="bg-white w-full h-1"></div>
+                <div className="flex gap-20 mb-10 ">
                 <span className="text-white">© 2023 - 2024 YOHOWORK.com®</span>
+                <div className="flex gap-5">
                 <Link className="text-white" href={""}>Terms of Service</Link>
                 <Link className="text-white" href={""}>Privacy Policy</Link>
                 <Link className="text-white" href={""}>Cookie Settings </Link>
                 <Link className="text-white" href={""}>Accessibility</Link>
+                </div>
                 </div>
 
             </Container>

@@ -7,6 +7,7 @@ import { CardsProvider } from "@/context/CardsContext";
 import "./globals.css";
 
 {/* <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
+// add logo
 
 const lexend = Lexend({
   variable: "--font-lexend",

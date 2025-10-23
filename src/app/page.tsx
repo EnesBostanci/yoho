@@ -47,10 +47,10 @@ const smCards_2=[
       <main>
       <Hero/>
       <WhatIs/>
-      <WhyBecome/>
-      <Browse  render={smCards} header="Browse Opportunities by Fields"/>
+      <WhyBecome title={<>Why Become a <br /> WonderMaker?</>} />
+      <Browse  render={smCards} header={<>Browse<br/>Opportunities<br/>by Talent</>}/>
       <Map/>
-      <Browse  render={smCards_2} header="Browse Freelancers by Talent"/>
+      <Browse  render={smCards_2} header={<>Browse<br/>Freelancers<br/>by Talent</>}/>
       </main>
     </div>
     );

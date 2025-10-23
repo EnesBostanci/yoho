@@ -13,8 +13,12 @@
   --color-primary4: #233A62;
   --color-search: #9A9A9A;
   --color-background: #F2F2F7;
-  --color-background2: #F2F2F7;
+  --color-button: hsla(208, 56%, 55%, 1);
+  --color-text:hsla(218, 47%, 26%, 1);
+  --color-text2:hsla(231, 67%, 14%, 1);
+  --color-text3:hsla(0, 0%, 100%, 1);
   --color-border: #8FC1E8;
+  --color-border2: hsla(206, 66%, 74%, 1);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-sidebar-ring: var(--sidebar-ring);
