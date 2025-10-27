@@ -4,13 +4,15 @@ export default function Browse({render,header}:
     {    render:{url:string;
          title: string;
         }[];
-    header:string}){
+    header:React.ReactNode}){
 
     return(
-        <section>
-            <Container className="flex">
-            <h2 className="font-bold leading-tight">{header}</h2>
+        <section className="mt-50">
+            <Container className="flex flex-col justify-between sm:flex-row">
+            <h2 className="font-bold leading-tight font-lexend text-6xl  text-text2 ">{header}</h2>
+            <div className="flex flex-col sm:flex-row gap-10 justify-between">
             {render.map((card)=>(<CardSm url={card.url} title={card.title} key={card.title} />))}
+            </div>
             </Container>
 
         </section>

@@ -2,14 +2,14 @@ import Container from "../Container"
 import Image from "next/image";
 import Button from "../Ui/Button";
 
-export default function WhatIs(){
+export default function WhatIs({header,headerSize,button,reverse}){
     return(
     <section className="relative">
-        <Image  alt="layer" src="background.svg" fill  className="z-0"></Image>
-        <Image width={900} height={800} alt="layer" src="layer_1.svg" className="absolute right-0 -top-40 z-10"></Image>
-            <Container>
-                <h2 className="font-bold text-8xl uppercase leading-tight z-10 pt-36">What is<br/> YohoWork?</h2>
-                <Button title="YOU & YOHO" bgColor="bg-primary1" textColor="white"/>
+        <Image  alt="layer" src="background.svg" fill  className="bg-pri z-0 w-full object-cover"></Image>
+            <Container className={reverse ?"flex flex-row-reverse":"" }>
+                <h2 className={`font-bold ${headerSize} text-text uppercase leading-tight z-10 pt-36`}>{header}</h2>
+                {button && <Button title="YOU & YOHO" bgColor="bg-button" textColor="white"/>}
+                <Image width={900} height={800} alt="layer" src="layer_1.svg" className={reverse ?"absolute left-0 -top-40 z-10":"absolute right-0 -top-40 z-10" }/>
             </Container>
     </section>
         );
