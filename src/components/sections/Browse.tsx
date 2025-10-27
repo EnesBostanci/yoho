@@ -8,9 +8,9 @@ export default function Browse({render,header}:
 
     return(
         <section className="mt-50">
-            <Container className="flex justify-between">
+            <Container className="flex flex-col justify-between sm:flex-row">
             <h2 className="font-bold leading-tight font-lexend text-6xl  text-text2 ">{header}</h2>
-            <div className="flex gap-10 justify-between">
+            <div className="flex flex-col sm:flex-row gap-10 justify-between">
             {render.map((card)=>(<CardSm url={card.url} title={card.title} key={card.title} />))}
             </div>
             </Container>

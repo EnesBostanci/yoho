@@ -6,11 +6,21 @@ export default function Freelancers(){
                 "YohoWork connects freelancers with assignments that not only fulfill professional goals but also contribute to social and environmental betterment."
             ]
     return(
-        <main>
-            <Container>
-            <h1>Freelancers</h1>
-            {data.map((d,idx)=><Image key={idx} fill src="free.svg" alt={`freelancer ${idx}`}><p>d</p></Image>)}
+        <section>
+            {/* <Image src="dotedBackground.svg"  alt="dotedBackground" /> */}
+            <Container className="flex flex-col">
+            <h1 className="leading-tight text-6xl font-bold uppercase text-text mx-auto">Freelancers</h1>
+            <div className="flex justify-between">
+                {data.map((d,idx)=>(
+                <div key={idx} className="relative">
+                <Image className="absolute relative inset-0 -z-10" key={idx} width={500} height={250} src="free.svg" alt={`freelancer ${idx} backgorund`}/>
+                <p className=" absolute inset-0 leading-8 capitalize z-10">{d}</p>
+                </div>
+            ))}
+            </div>
+
             </Container>
-        </main>
+
+        </section>
     )
 }

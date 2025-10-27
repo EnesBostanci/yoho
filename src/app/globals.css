@@ -124,7 +124,14 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
-
+container.responsive{
+  @media screen {
+    
+  }
+  @media screen {
+    
+  }
+}
 @layer base {
   * {
     @apply border-border outline-ring/50;

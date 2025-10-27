@@ -17,7 +17,7 @@ const Cards=useCards();
             <Image width={370} height={370} alt="GreenBlur" src="GreenBlur.svg" className="z-0 absolute"/>
             </div>
             }
-            <div  className="flex mt-12.5 justify-center">
+            <div  className="flex flex-col gap-5 sm:flex-row mt-12.5 justify-center">
 
             {Cards.map((card)=>(
                 
