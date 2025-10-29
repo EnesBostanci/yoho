@@ -41,7 +41,7 @@ export default function RootLayout({
   return (  
     <html lang="en">
       <body
-        className={`${space_grotesk.variable} ${dm_snans.variable} ${lexend.variable} antialiased`}
+        className={`${space_grotesk.variable} ${dm_snans.variable} ${lexend.variable} antialiased overflow-x-hidden`}
       >
         <SiteHeader/>
         <CardsProvider>

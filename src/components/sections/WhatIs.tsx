@@ -5,11 +5,13 @@ import Button from "../Ui/Button";
 export default function WhatIs({header,headerSize,button,reverse}){
     return(
     <section className="relative">
-        <Image  alt="layer" src="background.svg" fill  className="bg-pri z-0 w-full object-cover"></Image>
-            <Container className={reverse ?"flex flex-row-reverse":"" }>
-                <h2 className={`font-bold ${headerSize} text-text uppercase leading-tight z-10 pt-36`}>{header}</h2>
+        <Image  alt="layer" src="background.svg" fill className="z-0  object-cover"/>
+            <Container className={`flex flex-col gap-4 lg:justify-center lg:flex-row ${reverse ?"lg:flex-row-reverse lg:mb-150 lg:mt-100":"" }`}>
+                <div className={`text-center ${reverse ?"lg:ml-auto":"lg:mr-auto"} `}>
+                <h2 className={`font-bold text-4xl ${headerSize} text-text uppercase leading-tight z-10 `}>{header}</h2>
                 {button && <Button title="YOU & YOHO" bgColor="bg-button" textColor="white"/>}
-                <Image width={900} height={800} alt="layer" src="layer_1.svg" className={reverse ?"absolute left-0 -top-40 z-10":"absolute right-0 -top-40 z-10" }/>
+                </div>
+                <Image width={900} height={700} alt="layer" src="layer_1.svg" className={reverse ?"lg:absolute left-0 mb-10 lg:-top-40 z-10":"lg:absolute right-0 lg:-top-40 z-10" }/>
             </Container>
     </section>
         );
