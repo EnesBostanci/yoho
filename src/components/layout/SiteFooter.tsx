@@ -55,9 +55,9 @@ export default function SiteFooter(){
     const headers_class="font-bold leading-7 text-lg font-lexend text-white text-text3 ";
     const items_class="leading-9 text-white text-text3";
     return(
-        <footer className="bg-primary4 mt-30">
+        <footer className="bg-primary4 mt-30 xl:[clip-path:polygon(0_80px,100px_0,calc(100%-100px)_0,100%_80px,100%_100%,0_100%)]">
             <Container className="flex flex-col pt-27.5 gap-10"> 
-                <div className="flex justify-center gap-15">
+                <div className="flex flex-col justify-center gap-15 sm:flex-row ">
                     {links.map((link)=>(
                     <div className="flex flex-col gap-2" key={link.title}>
                         <h2 className={headers_class}>{link.title}</h2>
@@ -71,8 +71,8 @@ export default function SiteFooter(){
                     </div>
                     ))} 
                 </div>
-                <div className="flex  justify-between ">
-                    <div className="flex items-center gap-2.5">
+                <div className="flex flex-col justify-between sm:flex-row gap-2">
+                    <div className="flex gap-2.5 flex-wrap  ">
                     <h2 className="text-white mr-3 text-base leading-8 font-medium">Follow Us</h2>
                     {/*followus */}
                     <Image src="/Facebook.png" alt="FacebookLogo" width={36} height={36}/>
@@ -82,21 +82,21 @@ export default function SiteFooter(){
                     <Image src="/Youtube.png" alt="YoutubeLogo" width={36} height={36}/>
                     </div>
                     {/* mobile apps */}
-                    <div className="flex items-center gap-2.5">
+                    <div className="flex gap-2.5  ">
                     <h2 className="text-white mr-3 text-base leading-8 font-medium">Mobile Apps</h2>
                     <Image src="/apple.png" alt="appleLogo" width={36} height={36}/>
                     <Image src="/android.png" alt="androidLogo" width={36} height={36}/>
                     </div>
                 </div>
                 <div className="bg-white w-full h-1"></div>
-                <div className="flex gap-20 mb-10 ">
+                <div className="flex gap-20 mb-10 flex-wrap  ">
                 <span className="text-white">© 2023 - 2024 YOHOWORK.com®</span>
-                <div className="flex gap-5">
+                    <div className="flex gap-5 flex-wrap  ">
                 <Link className="text-white" href={""}>Terms of Service</Link>
                 <Link className="text-white" href={""}>Privacy Policy</Link>
                 <Link className="text-white" href={""}>Cookie Settings </Link>
                 <Link className="text-white" href={""}>Accessibility</Link>
-                </div>
+                    </div>
                 </div>
 
             </Container>

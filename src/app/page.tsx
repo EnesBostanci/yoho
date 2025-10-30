@@ -4,7 +4,8 @@ import Browse from "@/components/sections/Browse";
 import WhyBecome from "@/components/sections/WhyBecome";
 import Map from "@/components/sections/map";
 import For from "@/components/sections/For";
-import { reverse } from "dns";
+import {Landmark, Monitor} from "lucide-react";
+
 export default function Home() {
 
   const smCards=[
@@ -49,17 +50,17 @@ const forData=[
     {
         img:"for1.svg",
         span:"For Freelancers",
-        header:"Are You Ready To Take Your Career To A Whole New Level?",
+        header:<>Are You Ready To Take <br/> Your Career To A Whole <br/> New Level?</>,
         lines:["Access global opportunities for skill enhancement and professional development.","Earn a sustainable livelihood under any circumstances.","Engage in projects that have a meaningful, positive impact on the world."],
-        img2:{icon:"landmark",text:"Learn more about our Freelancer Academy & Programs"},
+        img2:{icon:<Landmark className="text-primary1"/>,text:"Learn more about our Freelancer Academy & Programs"},
         reverse:false    
     },
     {
         img:"for2.svg",
         span:"For Companies",
-        header:"Are You Ready To Take Your Career To A Whole New Level?",
+        header:<>Need to Innovate While <br/> Empowering Communities?</>,
         lines:["Connect with a global pool of skilled freelancers ready to meet diverse business needs.","Streamline business operations by eliminating logistical hurdles and reducing overhead costs.","Enhance your brand’s social impact by supporting freelancers from various backgrounds."],
-        img2:{icon:"landmark",text:"Learn more about our pool of experts & freelancers"},
+        img2:{icon:<Monitor className="text-primary1"/>,text:"Learn more about our pool of experts & freelancers"},
         reverse:true    
     }
 ]
@@ -79,10 +80,10 @@ const heroData={
     <div>
       <main>
       <Hero span={heroData.span} header={heroData.header} text={heroData.text} expolorColor={heroData.expolorColor} />
-      <WhatIs header={<>What is<br /> YohoWork?</>} headerSize="text-8xl" button={true} reverse={false} />
-      <WhyBecome title={<>Why Become a <br /> WonderMaker?</>} />
-      <Browse  render={smCards} header={<>Browse<br/>Opportunities<br/>by Talent</>}/>
-      <For img={forData[0].img} span={forData[0].span} header={forData[0].header} lines={forData[0].lines} img2={forData[0].img2} reverse={forData[1].reverse}/>
+      <WhatIs header={<>What is<br /> YohoWork?</>} headerSize="lg:text-8xl" button={true} reverse={false} />
+      <WhyBecome title={<>Why Become a <br /> WonderMaker?</>} render={true} />
+      <Browse  render={smCards} header={<>Browse<br/>Opportunities<br/>by Fields</>}/>
+      <For img={forData[0].img} span={forData[0].span} header={forData[0].header} lines={forData[0].lines} img2={forData[0].img2} reverse={forData[0].reverse}/>
       <Map/>
       <Browse  render={smCards_2} header={<>Browse<br/>Freelancers<br/>by Talent</>}/>
       <For img={forData[1].img} span={forData[1].span} header={forData[1].header} lines={forData[1].lines} img2={forData[1].img2} reverse={forData[1].reverse}/>

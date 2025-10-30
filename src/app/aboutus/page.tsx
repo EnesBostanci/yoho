@@ -16,10 +16,11 @@ export default function Page(){
     return(
         <main>
             <Hero span={heroData.span} header={heroData.header} expolorColor={heroData.expolorColor} />
-            <WhyBecome/>
+            <WhyBecome render={false}/>
             <Freelancers/>
             <Companies/>
             <WhatIs header=<>The Structure <br/> A Model of <br/> Triangular Synergy </> headerSize="text-5xl" reverse={true} button={false}/>   
+
         </main>
     )
 }

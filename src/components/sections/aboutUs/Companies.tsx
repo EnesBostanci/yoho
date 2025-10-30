@@ -8,11 +8,11 @@ const companies=[
 ]
 export default function Companies(){
     return(
-        <section >
-            <Container className="flex flex-col ">
-            <h2 className="font-bold text-text text-6xl leading-tight flex items-center mx-auto">COMPANIES</h2>
+        <section className="my-20">
+            <Container className="flex flex-col gap-10">
+            <h2 className="font-bold text-text text-4xl lg:text-6xl leading-tight mx-auto">COMPANIES</h2>
             {companies.map((c,id)=>
-            <article className="flex justify-between" key={id}>
+            <article className="flex flex-col justify-between text-center lg:text-left gap-5 items-center lg:flex-row" key={id}>
             <Company header={c.header} text={c.text} img={c.img}/>
             </article>
             )}

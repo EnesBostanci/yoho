@@ -10,4 +10,8 @@ interface CardType {
     button:ButtonType;
 }
 
-export type {CardType, ButtonType};
+interface CardProps extends CardType {
+    render?: boolean;
+  }
+
+export type {CardType, ButtonType ,CardProps};
