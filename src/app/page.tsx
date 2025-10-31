@@ -80,7 +80,7 @@ const heroData={
     <div>
       <main>
       <Hero span={heroData.span} header={heroData.header} text={heroData.text} expolorColor={heroData.expolorColor} />
-      <WhatIs header={<>What is<br /> YohoWork?</>} headerSize="lg:text-8xl" button={true} reverse={false} />
+      <WhatIs header={<>What is<br /> YohoWork?</>} headerSize="lg:text-8xl" button={true} reverse={false} img="Layer_1.svg" />
       <WhyBecome title={<>Why Become a <br /> WonderMaker?</>} render={true} />
       <Browse  render={smCards} header={<>Browse<br/>Opportunities<br/>by Fields</>}/>
       <For img={forData[0].img} span={forData[0].span} header={forData[0].header} lines={forData[0].lines} img2={forData[0].img2} reverse={forData[0].reverse}/>

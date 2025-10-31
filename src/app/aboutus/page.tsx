@@ -19,7 +19,7 @@ export default function Page(){
             <WhyBecome render={false}/>
             <Freelancers/>
             <Companies/>
-            <WhatIs header=<>The Structure <br/> A Model of <br/> Triangular Synergy </> headerSize="text-5xl" reverse={true} button={false}/>   
+            <WhatIs header=<>The Structure <br/> A Model of <br/> Triangular Synergy </> headerSize="text-5xl" reverse={true} button={false} img="Layer_2.svg"/>   
 
         </main>
     )
