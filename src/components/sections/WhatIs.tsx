@@ -2,7 +2,7 @@ import Container from "../Container"
 import Image from "next/image";
 import Button from "../Ui/Button";
 
-export default function WhatIs({header,headerSize,button,reverse}){
+export default function WhatIs({header,headerSize,button,reverse,img}){
     return(
     <section className="relative">
         <Image  alt="layer" src="background.svg" fill className="z-0  object-cover"/>
@@ -11,7 +11,7 @@ export default function WhatIs({header,headerSize,button,reverse}){
                 <h2 className={`font-bold text-4xl ${headerSize} text-text uppercase leading-tight z-10 `}>{header}</h2>
                 {button && <Button title="YOU & YOHO" bgColor="bg-button" textColor="white"/>}
                 </div>
-                <Image width={900} height={700} alt="layer" src="layer_1.svg" className={reverse ?"lg:absolute left-0 mb-10 lg:-top-40 z-10 lg:w-1/2":"lg:absolute right-0 lg:-top-40 z-10 lg:w-1/2" }/>
+                <Image width={900} height={700} alt="layer" src={img} className={reverse ?"lg:absolute left-0 mb-10 lg:-top-40 z-10 lg:w-1/2":"lg:absolute right-0 lg:-top-40 z-10 lg:w-1/2" }/>
             </Container>
     </section>
         );

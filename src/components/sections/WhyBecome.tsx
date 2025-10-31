@@ -8,7 +8,7 @@ export default function WhyBecome({title,render}:{title?:React.ReactNode;render?
 const Cards=useCards();
 
     return(
-        <section className={`${title?"mt-70 z-10":" z-10"}`}>
+        <section className={`${title?"mt-100 z-10":" z-10"}`}>
             <Container>
                 
             { title && 

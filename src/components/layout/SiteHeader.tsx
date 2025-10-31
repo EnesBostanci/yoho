@@ -17,7 +17,7 @@ export default function SiteHeader(){
                 <div className="my-[45px] flex justify-between gap-16 flex-1">
                     <Image src={"/logo.svg"} alt="site logo" width={111} height={42}/>
                     <nav className="flex items-center flex-1 justify-between">
-                        <Link className="text-sm font-bold whitespace-nowrap" href={""}>About Us</Link>
+                        <Link className="text-sm font-bold whitespace-nowrap" href={"/aboutus"}>About Us</Link>
                         <Link className="text-sm font-bold" href={""}>FreeLancers</Link>
                         <Link className="text-sm font-bold" href={""}>Companies</Link>
                         <Link className="text-sm font-bold text-center whitespace-nowrap" href={""}>Sponsors &<br/> Development Agencies</Link>
@@ -50,7 +50,7 @@ export default function SiteHeader(){
                         <X onClick={handleClick} className="self-end h-6 w-6 cursor-pointer"/>
                     <div>
                     <nav className="flex flex-col gap-2 items-center">
-                        <Link className="text-sm font-bold whitespace-nowrap" href={""}>About Us</Link>
+                        <Link className="text-sm font-bold whitespace-nowrap" href={"/aboutus"}>About Us</Link>
                         <Link className="text-sm font-bold" href={""}>FreeLancers</Link>
                         <Link className="text-sm font-bold" href={""}>Companies</Link>
                         <Link className="text-sm font-bold " href={""}>Sponsors & Development Agencies</Link>
