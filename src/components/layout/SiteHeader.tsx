@@ -15,7 +15,7 @@ export default function SiteHeader(){
         <header className="hidden xl:flex xl:justify-between gap-5">
             {/* desktop header */}
                 <div className="my-[45px] flex justify-between gap-16 flex-1">
-                    <Image src={"/logo.svg"} alt="site logo" width={111} height={42}/>
+                    <Link href="/"><Image src={"/logo.svg"} alt="site logo" width={111} height={42}/></Link>
                     <nav className="flex items-center flex-1 justify-between">
                         <Link className="text-sm font-bold whitespace-nowrap" href={"/aboutus"}>About Us</Link>
                         <Link className="text-sm font-bold" href={""}>FreeLancers</Link>

@@ -33,7 +33,7 @@ export default function SiteFooter(){
         {
             title: "Sponsors",
             listitems: [
-                { title: "About us", url: "#" },
+                { title: "About us", url: "/aboutus" },
                 { title: "Sponsors relations", url: "#" },
                 { title: "Our impact", url: "#" },
                 { title: "Press", url: "#" },

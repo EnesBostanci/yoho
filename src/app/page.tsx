@@ -4,6 +4,7 @@ import Browse from "@/components/sections/Browse";
 import WhyBecome from "@/components/sections/WhyBecome";
 import Map from "@/components/sections/map";
 import For from "@/components/sections/For";
+import  TrustedBy  from "@/components/sections/TrustedBy";
 import {Landmark, Monitor} from "lucide-react";
 
 export default function Home() {
@@ -87,6 +88,7 @@ const heroData={
       <Map/>
       <Browse  render={smCards_2} header={<>Browse<br/>Freelancers<br/>by Talent</>}/>
       <For img={forData[1].img} span={forData[1].span} header={forData[1].header} lines={forData[1].lines} img2={forData[1].img2} reverse={forData[1].reverse}/>
+      <TrustedBy/>
       </main>
     </div>
     );
