@@ -22,7 +22,7 @@ const data=[
         img:"profilepic.svg",
         imgName:"Sara Al-Khawaja",
         imgPos:"Director of Strategic Initiatives"
-    },
+    },  
 ]
 export default function TrustedBy(){
     return(
