@@ -3,6 +3,7 @@ import Hero from "@/components/sections/hero";
 import WhatIs from "@/components/sections/WhatIs";
 import Freelancers from "@/components/sections/aboutUs/FreeLancers";
 import Companies from "@/components/sections/aboutUs/Companies";
+import Sponsors from "@/components/sections/aboutUs/Sponsors";
 
 const heroData={
     span:{
@@ -20,7 +21,7 @@ export default function Page(){
             <Freelancers/>
             <Companies/>
             <WhatIs header=<>The Structure <br/> A Model of <br/> Triangular Synergy </> headerSize="text-5xl" reverse={true} button={false} img="Layer_2.svg"/>   
-
+            <Sponsors/>
         </main>
     )
 }

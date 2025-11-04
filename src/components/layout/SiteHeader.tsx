@@ -42,13 +42,13 @@ export default function SiteHeader(){
         </header>
         {/* burger menu */}
         <header className="relative flex justify-between  items-center xl:hidden ">
-                <Image src={"/logo.svg"} alt="site logo" width={111} height={42} className="my-[45px]"/>
+                <Link href="/"><Image src={"/logo.svg"} alt="site logo" width={111} height={42} className="my-[45px]"/></Link>
                 <Menu onClick={handleClick} className="h-6 w-6"/>
                 {/* dropdown */}
                 {menuOpen && 
-                <div  className="flex flex-col  bg-background2 px-4 absolute top-full right-0 z-50 w-full">
+                <div  className="flex flex-col items-center  w-fit border rounded bg-background2 px-4 absolute top-full right-0 z-50 ">
                         <X onClick={handleClick} className="self-end h-6 w-6 cursor-pointer"/>
-                    <div>
+                    <div className="w-fit">
                     <nav className="flex flex-col gap-2 items-center">
                         <Link className="text-sm font-bold whitespace-nowrap" href={"/aboutus"}>About Us</Link>
                         <Link className="text-sm font-bold" href={""}>FreeLancers</Link>
